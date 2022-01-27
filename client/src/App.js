@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
-function App() {
+import NavBar from './components/NavBarComp';
+import Main from './views/MainView';
+
+////////////////////////////////////////////////////
+//  ROOT APPLICATION
+////////////////////////////////////////////////////
+
+/**
+ * Root Application
+ * @returns HTML for the Root Application
+ */
+const App = () => {
+  // //// OUTPUT ///////////////////////////////////
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <div className='root'>
+        {/* **** NAVIGATION BAR ********* */}
+        <NavBar />
+        <Switch >
+          {/* **** MAIN COMPONENT ********** */}
+          <Main />
+        </Switch>
+
+        </div>
+      </BrowserRouter>
   );
 }
 

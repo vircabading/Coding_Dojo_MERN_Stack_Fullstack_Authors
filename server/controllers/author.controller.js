@@ -8,18 +8,15 @@ const Author = require("../models/author.model");
 // //// CREATE //////////////////////////////////
 
 module.exports.createAuthor = (req, res) => {
-    Author.create(req.body)
+    const { name } = req.body;
+    Author.create({ name })
         .then(
             newlyCreatedAuthor => res.json({ 
                 author: newlyCreatedAuthor,
                 message: "🍻🍻🍻 Create was successful 🍻🍻🍻"
             })
         )
-        .catch(
-            err => res.json({ 
-                message: "🤦🤦🏼🤦 Create was not successful 🤦🤦🏼🤦🏼", 
-                error: err 
-            })
+        .catch(err => {res.status(400).json(err )}
         );
     };
 
@@ -70,12 +67,8 @@ module.exports.updateAuthor = (req,res) => {
                 message: "🍔🍔🍔 Success: Update 🍔🍔🍔"
             })
         )
-        .catch( err =>
-            res.json({
-                message: "🛑🛑🛑 Failure: UnAble to Update 🛑🛑🛑",
-                error: err
-            })
-        )
+        .catch(err => {res.status(400).json(err )}
+        );
 };
 
 // //// DELETE //////////////////////////////////
