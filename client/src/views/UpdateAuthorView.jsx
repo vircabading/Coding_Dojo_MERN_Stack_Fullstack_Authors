@@ -65,6 +65,7 @@ const UpdateAuthorView = () => {
             ? <div >
                 <h2>Update Author 📝:</h2>
                 {/* <p>Errors: {JSON.stringify(errors)}</p> */}
+                {/* **** Show Errors ******** */}
                 {
                     errors
                         ? errors.map((error, idx) =>
@@ -73,6 +74,7 @@ const UpdateAuthorView = () => {
                             </p>)
                         : <p className='bg-info'><strong>&nbsp;</strong></p>
                 }
+                {/* **** Form ******** */}
                 <form onSubmit={e => handleSubmit(e)} >
                     <div className="form-group mb-2">
                         <label htmlFor="name">Name</label>

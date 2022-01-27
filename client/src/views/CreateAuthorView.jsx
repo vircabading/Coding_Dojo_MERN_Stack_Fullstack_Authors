@@ -47,6 +47,7 @@ const CreateAuthorView = () => {
     return (<div>
         <h2>Add a new Author:</h2>
         {/* <p>Errors: { JSON.stringify(errors) }</p> */}
+        {/* **** Show Errors ******** */}
         {
             errors
             ? errors.map((error, idx) => 
@@ -55,6 +56,7 @@ const CreateAuthorView = () => {
                 </p>)
             : <p className='bg-info'><strong>&nbsp;</strong></p>
         }
+        {/* **** Input Form ******** */}
         <form onSubmit={ e => handleSubmit(e) } >
             <div className="form-group mb-2">
                 <label htmlFor="name">Name:</label>
