@@ -7,7 +7,7 @@ const Author = require("../models/author.model");
 
 // //// CREATE //////////////////////////////////
 
-module.exports.create = (req, res) => {
+module.exports.createAuthor = (req, res) => {
     Author.create(req.body)
         .then(
             newlyCreatedAuthor => res.json({ 
