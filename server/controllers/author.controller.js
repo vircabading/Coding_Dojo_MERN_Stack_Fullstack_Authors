@@ -16,8 +16,7 @@ module.exports.createAuthor = (req, res) => {
                 message: "🍻🍻🍻 Create was successful 🍻🍻🍻"
             })
         )
-        .catch(err => {res.status(400).json(err )}
-        );
+        .catch(err => res.status(400).json(err ));
     };
 
 // //// RETRIEVE ////////////////////////////////
@@ -31,12 +30,7 @@ module.exports.findAllAuthors = (req, res) => {
                 message: "🦄🦄🦄 Success: Found All 🦄🦄🦄"
             })
         )
-        .catch( err =>
-            res.json({
-                message: "🤚🏼🤚🏼🤚🏼 Failure: UnAble to Find All ✋🏼✋🏼✋🏼",
-                error: err
-            })
-        )
+        .catch(err => res.status(400).json(err ));
 };
 
 // **** Find One ********
@@ -48,12 +42,7 @@ module.exports.fineOneAuthor = (req, res) => {
                 message: "🌈🌈🌈 Success: Found one 🌈🌈🌈"
             })
         )
-        .catch( err =>
-            res.json({
-                message: "🛑🛑🛑 Failure: UnAble to Find a Product 🛑🛑🛑",
-                error: err
-            })
-        )
+        .catch(err => res.status(400).json(err ));
 };
 
 // //// UPDATE //////////////////////////////////
@@ -67,8 +56,7 @@ module.exports.updateAuthor = (req,res) => {
                 message: "🍔🍔🍔 Success: Update 🍔🍔🍔"
             })
         )
-        .catch(err => {res.status(400).json(err )}
-        );
+        .catch(err => res.status(400).json(err ));
 };
 
 // //// DELETE //////////////////////////////////
@@ -81,10 +69,5 @@ module.exports.deleteAuthor = (req, res) => {
                 message: "🍕🍕🍕 Success: Delete  🍕🍕🍕"
             })
         )
-        .catch( err =>
-            res.json({
-                message: "🛑🛑🛑 Failure: UnAble to Delete 🛑🛑🛑",
-                error: err
-            })
-        )
+        .catch(err => res.status(400).json(err ));
 };

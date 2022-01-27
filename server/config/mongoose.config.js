@@ -4,12 +4,9 @@
 
 // //// FIELDS //////////////////////////////////
 const mongoose = require("mongoose");
-const DATABASE_NAME = "authors_db";
+const DATABASE_NAME = "practice_db";
 
 // //// CONNECT SERVER TO DATABASE //////////////
-mongoose.connect("mongodb://localhost/" + DATABASE_NAME, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-})
+mongoose.connect("mongodb://localhost/" + DATABASE_NAME )
 	.then(() => console.log("🌈🌈🌈 Established a connection to the database 🌈🌈🌈"))
 	.catch(err => console.log(`🤷🤷🤷 Something went wrong when connecting to the database 🤷🤷🤷`, err));
