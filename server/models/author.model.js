@@ -17,7 +17,7 @@ const AuthorSchema = new mongoose.Schema({
         min: [1, "{PATH} must be at least 1"],
         max: [150, "{PATH} must be less than 150"]
     },
-    genra: String,
+    genre: String,
     classic: Boolean
 }, {timestamps: true});			// Timestamps implement CreatedAt and UpdatedAt
 

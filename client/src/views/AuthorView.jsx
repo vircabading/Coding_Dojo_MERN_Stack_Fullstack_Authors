@@ -28,8 +28,18 @@ const AuthorView = () => {
             ? <div>
                 <h2>Author ✍🏼:</h2>
                 <hr />
+                <p>{JSON.stringify(author)}</p>
                 <p>
-                <strong>Name: </strong>{ author.name }
+                    <strong>Name: </strong>{author.name}
+                </p>
+                <p>
+                    <strong>Age: </strong>{ author.age }
+                </p>
+                <p>
+                    <strong>Genre: </strong>{author.genre }
+                </p>
+                <p>
+                    <strong>Classic: </strong>{ JSON.stringify(author.classic) }
                 </p>
                 <hr />
                 <div className='row'>

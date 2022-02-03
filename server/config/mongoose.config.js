@@ -4,7 +4,7 @@
 
 // //// FIELDS //////////////////////////////////
 const mongoose = require("mongoose");
-const DATABASE_NAME = "practice_db";
+const DATABASE_NAME = "practice_3_db";
 
 // //// CONNECT SERVER TO DATABASE //////////////
 mongoose.connect("mongodb://localhost/" + DATABASE_NAME )
